@@ -1,0 +1,110 @@
+Jacky Guzman 
+In each level, there will be instructions for how to get the password you need to move on to the next level. 
+The instructions will be written in a numbered list. The number in front of the phrase you need to write should not
+be included in the text that you write into the terminal. It should all be straightforward and easy. When writing in
+the terminal, know that exactly how the phrase looks like here should be the exact same way it should look in the 
+terminal (include all spaces and dots and slashes and whatnot). If you ever see '<tab>' that means to press the Tab
+button (as pressing the Tab button will automatically fill the rest of the name of a file or directory for you on 
+the terminal). The lesson is simply there for educational purposes only, it does not need to be written in the 
+terminal or anything like that, it simply helps understand what was going on. 
+
+Level 0 
+password: bandit0 
+
+Level 0 -> 1
+1   cat readme 
+Password Obtained: ZjLjTmM6FvvyRnrb2rfNWOZOTa6ip5If
+Lesson: The command 'cat' opens up a file and shows the contents of the file on the terminal. 
+
+Level 1 -> 2
+1   cat ./- 
+Password Obtained: 263JGJPfgU6LtdEvgfWU1XP5yac29mFx
+Lesson: The './' is a way of helping the computer know that from the current directory we are in (which is 
+represented by the '.') we will be looking at the file that comes after the '/' (the slash symbol is a directory 
+seperator, it seperates the name of the directory from the file we are going to be looking at). 
+
+Level 2 - 3
+1   ls
+2   cat sp<tab> 
+Password Obtained: MNk8KNH3Usiio41PRUEoDFPqfxLPlSmx
+Lesson: The terminal is happy with either the name of the file being in quotation marks or having back slashes 
+placed in front of every space there is in the name of a file. For example, if a file is called 'spaces in this 
+filename', you could either type 'cat "spaces in this filename" ' or 'cat spaces\ in\ this\ filename ' .
+
+Level 3-4 
+1   ls -al
+2   cd inhere
+3   ls -al
+4   cat ...Hiding-From-You
+Password Obtained: 2WmrDFRmJIq3IPxneAaMGhap0pFhF3NJ
+Lesson: The command 'cd' helps you move from the current directory you are in to whichever directory you want to 
+move to. 
+
+Level 4 - 5
+1   ls -al
+2   cd inhere
+3   ls -al
+6   file ./*
+7   cat ./-file07
+Password Obtained: 4oQYVPkxZOOEOO5pTW81FB8j8lxXGUQw
+Lesson: The command 'file' helps you identify what type of information a file has, whether it is readable text 
+(ASCII II), data, or something else. The symbols './*' that come after the command basically tell the computer
+hey, I want to know the file types of everything that is in the current directory we are in. The asterisk is a 
+wildcard. [need more clarification on what the asterisk does and how it was able to select all the files]. 
+
+Level 5 - 6 
+1   ls
+2   cd inhere
+3   ls -al *
+4   cd maybehere07
+5   ls -al
+6   cat .file2
+Password Obtained: HWasnPhtq9AVKe0dmk45nxy20cvUa6EG
+Lesson: 
+
+Level 6 - 7 
+1   cd /      
+2   find -user bandit7 -group bandit6 2>/dev/null    
+3   cat ./var/lib/dpkg/info/bandit7.password
+Password Obtained: morbNTDkSW6jIlUc0ymOdMaLnOlFVAaj
+Lesson: The line 'cd /' will get you to the topmost directory there is. The command line 'find [directory] -user [
+name of user] -group [name of group]' basically said 'in a specific directory, find the file that has this 
+specific user an this specific group and return it. The '2>/dev/null' was necessary to make annoying text 
+and warning go away. 
+
+Level 7 - 8 
+1   ls -al
+2   cat data.txt
+3   grep millionth data.txt      
+Password Obtained: dfwvzFQi4mU0wfNbFOe9RoWskMLg7eEc
+Lesson: The 'grep' command finds the specific phrase you are looking for (which in this case was the word 
+millionth) in the file you provide it with and it returns the line of text where it found the phrase in. 
+
+Level 8 - 9 
+1   ls -al 
+2   sort data.txt | uniq -c
+Password Obtained: 4CKMh1JI91bUIZZPXDqGanal4xvAg0JM
+Lesson: The command 'sort' sorts the text in the file and 'uniq -c' returns the number of times a certain phrase 
+was repeated. [could there have been a better solution? a more simpler one?]
+
+Level 9 - 10 
+1   ls -al
+2   strings data.txt
+Password Obtained: FGUW5ilLVJrxX9kMYMmlN4MgbpfMiqey
+Lesson: The 'strings' command seperated all the characters in the file into groups of 4 characters or more that 
+end with a new-line or a null character 
+(definition found in https://www.ibm.com/docs/en/aix/7.2?topic=s-strings-command).  
+
+Level 10 - 11 
+1   ls -al
+2   base64 –decode data.txt
+Password Obtained: dtR173fZKb0RRsDFSGsg2RWnpNVj3qRr
+Lesson: The command 'base64 -decode' tells the computer to decode the file that was originally encoded using the 
+command base64 (complicated process that involves 1s and 0s and letters). [need better understanding of how 
+base64 gets encoded in the first place]
+
+Level 11 - 12 
+1   ls -al
+2   cat data.txt | tr ‘A-ZA-z’ ‘N-ZA-Mn-za-m’
+Password Obtained: 7x16WNeHIi5YkIhWsfFIqoognUTyj9Q4
+Lesson: The command 'tr'serves as a translator. [hard to explain and hard to grasp concept of it as well]
