@@ -1,12 +1,8 @@
 Jacky Guzman 
+
 In each level, there will be instructions for how to get the password you need to move on to the next level. 
 The instructions will be written in a numbered list. The number in front of the phrase you need to write should not
-be included in the text that you write into the terminal. It should all be straightforward and easy. When writing in
-the terminal, know that exactly how the phrase looks like here should be the exact same way it should look in the 
-terminal (include all spaces and dots and slashes and whatnot). If you ever see '<tab>' that means to press the Tab
-button (as pressing the Tab button will automatically fill the rest of the name of a file or directory for you on 
-the terminal). The lesson is simply there for educational purposes only, it does not need to be written in the 
-terminal or anything like that, it simply helps understand what was going on. 
+be included in the text that you write into the terminal. It should all be straightforward and easy. When writing in the terminal, know that exactly how the phrase looks like here should be the exact same way it should look in the terminal (include all spaces and dots and slashes and whatnot). If you ever see '<tab>' that means to press the Tab button (as pressing the Tab button will automatically fill the rest of the name of a file or directory for you on the terminal). The lesson is simply there for educational purposes only, it does not need to be written in the terminal or anything like that, it simply helps understand what was going on. 
 
 Level 0 
 password: bandit0 
