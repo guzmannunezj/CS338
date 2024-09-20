@@ -41,3 +41,9 @@ What is Seq, Ack, Win, Len, MSS, SACK_PERM TSv... mean?
 
 
 
+Useful Websites That Were Used To Obtain Information From, Learn From: 
+https://stackoverflow.com/questions/21253474/source-port-vs-destination-port
+https://www.geeksforgeeks.org/difference-between-source-port-and-destination-port/
+https://www.reddit.com/r/explainlikeimfive/comments/wjlgx5/eli5_why_do_protocols_need_a_port/
+https://www.freekb.net/Article?id=300#:~:text=SYN%20%2D%20The%20client%20sends%20a,Acknowledge)%20packet%20to%20the%20server
+https://www.baeldung.com/cs/tcp-fin-vs-rst#:~:text=SYN%3A%20a%20synchronization%20message%20typically,a%20client%20and%20a%20server
