@@ -26,11 +26,14 @@ and RST). [ACK] means "an acknowledgement message employed to declare the receip
 
 ===== HTTP =====
 
-1.) There were  TCP connections opened, since . 
+1.) There were three TCP connections opened. The first three lines of information on wireshark show [SYN], meaning that the client was asking the server
+three seperate times to make a connection. Also, there are three corresponding lines that show [SYN, ACK], showing that the server did in fact recieve
+the invites and sent them back. 
 
-2.) I can/cannot tell where the homepage (index.html) was requested. 
+2.) I cannot tell where the homepage (index.html) was requested because that information was encrypted, as the website is 'secure' (https). 
 
-3.) I can/cannot tell where the photograph (jeff-square-colorado.jpg) was requested. 
+3.) I cannot tell where the photograph (jeff-square-colorado.jpg) was requested because that information was encrypted and all we can see is "Application Data", meaning
+I cannot see what specifically was given to the client by the server. (TLS is a wild process!) 
 
 ===== QUESTIONS =====
 
@@ -39,11 +42,13 @@ that useful information?
 
 What is Seq, Ack, Win, Len, MSS, SACK_PERM TSv... mean?
 
-
+When trying to search in the web browser Firefox what type of information SSL hides, AI Overview informed me about how SSL makes it impossible for hackers to read "data
+in transit" but "SSL can also be misused by cybercriminals to hide dangerous content, such as malware, viruses, and spyware...". How is that so?
 
 Useful Websites That Were Used To Obtain Information From, Learn From: 
 https://stackoverflow.com/questions/21253474/source-port-vs-destination-port
 https://www.geeksforgeeks.org/difference-between-source-port-and-destination-port/
 https://www.reddit.com/r/explainlikeimfive/comments/wjlgx5/eli5_why_do_protocols_need_a_port/
 https://www.freekb.net/Article?id=300#:~:text=SYN%20%2D%20The%20client%20sends%20a,Acknowledge)%20packet%20to%20the%20server
-https://www.baeldung.com/cs/tcp-fin-vs-rst#:~:text=SYN%3A%20a%20synchronization%20message%20typically,a%20client%20and%20a%20server
+https://www.baeldung.com/cs/tcp-fin-vs-rst#:~:text=SYN%3A%20a%20synchronization%20message%20typically,a%20client%20and%20a%20server 
+
