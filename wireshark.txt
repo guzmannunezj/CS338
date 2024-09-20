@@ -1,0 +1,42 @@
+Jacky Guzman
+===== DAYTIME =====
+
+1.) The parts of the TCP 3-way handshake are:
+
+  1   192.168.106.129   129.6.15.28   TCP   48366 --> 13 [SYN] Seq=0 Win=32120 Len=0 MSS=1460 SACK_PERM TSv...
+  2   129.6.15.28   192.168.106.129   TCP   13 --> 48366 [SYN, ACK] Seq=0 Ack=1 Win=64240 Len=0 MSS=1460 
+  3   192.168.106.129   129.6.15.28   TCP   48366 --> 13 [ACK] Seq=0 Ack=1 Win=32120 Len=0 
+
+2.) The port number the cient uses for this interaction is: 48366. 
+
+3.) The client needs a port because just like the server, the client is running many different software servers at the same time and it needs to have a port so 
+the server knows where to send the information that the client requested in the first place. 
+
+4.) The frame that contains the actual date and time: 
+
+  4   129.6.15.28   192.168.106.129   DAYTIME   DAYTIME Response
+
+5.) [SYN] means "a synchronization message typically used to reequest a connection between a client and a server". [ACK] means "an acknowledgement message employed 
+to declare the receipt of a particular message". (Source: )
+
+6.) The entity nc client initiated the closing of the TCP connection, as it can be seen here: 
+
+  5   192.168.106.129   129.6.15.28   TCP   48366 --> 13 [FIN, ACK] Seq=1 Ack=53 Win=32068 Len=0 
+
+===== HTTP =====
+
+1.) There were  TCP connections opened, since . 
+
+2.) I can/cannot tell where the homepage (index.html) was requested. 
+
+3.) I can/cannot tell where the photograph (jeff-square-colorado.jpg) was requested. 
+
+===== QUESTIONS =====
+
+I get why we are shown the Source and Destination IP addresses and ports and the protocol being used in Wireshark, but why are we shown the Length? Why is 
+that useful information? 
+
+What is Seq, Ack, Win, Len, MSS, SACK_PERM TSv... mean?
+
+
+
