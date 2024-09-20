@@ -16,8 +16,8 @@ the server knows where to send the information that the client requested in the 
 
   4   129.6.15.28   192.168.106.129   DAYTIME   DAYTIME Response
 
-5.) [SYN] means "a synchronization message typically used to reequest a connection between a client and a server". [ACK] means "an acknowledgement message employed 
-to declare the receipt of a particular message". 
+5.) [SYN] means "a synchronization message typically used to reequest a connection between a client and a server" (Vinicius Fulber-Garcia, TCP: Differences Between FIN
+and RST). [ACK] means "an acknowledgement message employed to declare the receipt of a particular message" (Vinicius Fulber-Garcia, TCP: Differences Between FIN and RST). 
 (Source: https://www.baeldung.com/cs/tcp-fin-vs-rst#:~:text=SYN%3A%20a%20synchronization%20message%20typically,a%20client%20and%20a%20server)
 
 6.) The entity nc client initiated the closing of the TCP connection, as it can be seen here: 
