@@ -26,21 +26,22 @@ and RST). [ACK] means "an acknowledgement message employed to declare the receip
 
 ===== HTTP =====
 
-1.) There were three TCP connections opened. The first three lines of information on wireshark show [SYN], meaning that the client was asking the server
-three seperate times to make a connection. Also, there are three corresponding lines that show [SYN, ACK], showing that the server did in fact recieve
-the invites and sent them back. 
+1.) There were two TCP connections opened. The first two lines of information on wireshark show [SYN], meaning that the client was asking the server
+two seperate times to make a connection. Also, there are two corresponding lines that show [SYN, ACK], showing that the server did in fact recieve
+the invites and sent them back. (I hope I am counting the connections right.)
 
-2.) I cannot tell where the homepage (index.html) was requested because that information was encrypted, as the website is 'secure' (https). 
+2.) I can tell where the homepage (index.html) was requested, as it shows on line 5:
+  5   192.168.106.129   172.233.221.124   HTTP   398 GET / HTTP/1.1 
 
-3.) I cannot tell where the photograph (jeff-square-colorado.jpg) was requested because that information was encrypted and all we can see is "Application Data", meaning
-I cannot see what specifically was given to the client by the server. (TLS is a wild process!) 
+3.) I can tell where the photograph (jeff-square-colorado.jpg) was requested, as it shows on line :
+  11   192.168.106.129   172.233.221.124   HTTP   371 GET /jeff-square-colorado.jpg HTTP/1.1
 
 ===== QUESTIONS =====
 
 I get why we are shown the Source and Destination IP addresses and ports and the protocol being used in Wireshark, but why are we shown the Length? Why is 
 that useful information? 
 
-What is Seq, Ack, Win, Len, MSS, SACK_PERM TSv... mean?
+What does Seq, Ack, Win, Len, MSS, SACK_PERM TSv... mean in the Info column?
 
 When trying to search in the web browser Firefox what type of information SSL hides, AI Overview informed me about how SSL makes it impossible for hackers to read "data
 in transit" but "SSL can also be misused by cybercriminals to hide dangerous content, such as malware, viruses, and spyware...". How is that so?
