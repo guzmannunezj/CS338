@@ -46,6 +46,10 @@ What does Seq, Ack, Win, Len, MSS, SACK_PERM TSv... mean in the Info column?
 When trying to search in the web browser Firefox what type of information SSL hides, AI Overview informed me about how SSL makes it impossible for hackers to read "data
 in transit" but "SSL can also be misused by cybercriminals to hide dangerous content, such as malware, viruses, and spyware...". How is that so?
 
+What does [TCP Window Full] 80 --> 48068 [PSH, ACK] ....... mean?
+
+What is up with all the [PSH, ACK] and [ACK] there is in the later lines of information?
+
 Useful Websites That Were Used To Obtain Information From, Learn From, or Should Be Looked At Into Later: 
 https://stackoverflow.com/questions/21253474/source-port-vs-destination-port
 https://www.geeksforgeeks.org/difference-between-source-port-and-destination-port/
