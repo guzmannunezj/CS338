@@ -87,6 +87,8 @@ actual numbers that will be sent to Bob. (That is what I understood, I don't kno
 I am right though. Please feel free to send me feedback and clarification on things
 I am misinterpreting.)
 
+
+
 The message encoding process Alice used would be insecure even if Bob's keys 
 involved larger integers because it is a simple process that can be undone when one 
 has access to Bob's secret key. No matter how big Bob's secret keys are, it is easy
