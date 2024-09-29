@@ -1,0 +1,94 @@
+Jacky Guzman
+
+WHAT EVE INTERCEPTED FOR DIFFIE HELLMAN: 
+
+The shared secret agreed upon by Alice and Bob is 65. 
+
+How Eve figured out the shared secret: 
+Knowing that Alice and Bob agreed on g = 7 and p = 97, and that Alice sent Bob 
+the number 53 (A) and Bob sent Alice the number 82 (B), I used the formulas 
+g**b mod p = B
+and 
+g**a mod p = A 
+to calculate what a and b are. 
+I used python to easily find a and b: 
+> for i in range (120):
+>   if (7**i % 97 == 82):
+>     print(i)
+
+> for i in range (120):
+>   if (7**i % 97 == 53):
+>     print(i)
+
+I would have failed if A and B were greater than 96, as then no numbers would
+have been returned (I was playing around with the python code and no numbers were 
+returned when A or B were greater than or equal to 97 as it makes sense considering
+it is the same number or greater than what we are dividing by and one cannot have a 
+remainder of 97 or higher.) Other than that, I do not know in what other aspect the 
+strategy used to find the secret message would have failed. 
+
+WHAT EVE INTERCEPTED FOR RSA: 
+
+The encrypted message sent from Alice to Bob: 
+Dear Bob, check this out. https://www.surveillancewatch.io/ See ya, Alice.
+
+How Eve figured out the message: 
+Knowing that Bob's public key is (e = 13, n = 162991), I used this information to 
+find the two prime numbers p and q that were used to compute n. I used python to 
+easily find the two prime numbers: 
+> for i in range (2, 162991):
+>    if (162991/i % 1 == 0) :
+>        secInteger = 162991//i
+>        result = 'The numbers are ' +str(i) + ' and ' + str(secInteger)
+>        print(result)
+From this function I was able to obtain the numbers 389 and 419. 
+Now I know that e = 13, n = 162991, p = 389, and q = 419. 
+I then computed lambda(n) using p and q:
+lambda(n) = lcm(389-1, 419-1) = plugged these numbers into a website that 
+calculates the least common multiple for you = 81092
+After this one has to pick a number for e, but in our case it was already given to 
+us so we don't need to worry about having to find a number between 1 and 81092 such
+that the greatest common divisor of e and 81092 is equal to 1. (I believe this is 
+where my process could have failed if the integers involved were much larger because 
+if e was greater than lambda(n) or I mistakenly thought it was another number, this
+whole process for decyphering the message would not have worked. There is no other 
+instance where I can think that a larger integer would have caused problems for me.) 
+After e one has to find d by using e*d mod lambda(n) = 1. I again used python to help
+me find d: 
+> for i in range (81093):
+>    if (13*i % 81092 == 1):
+>        print('d = ' + str(i))
+d turned out to be 43665. (I feel like here, if the numbers are too big, there could
+be potentially a problem as well.)
+Knowing that e = 13, n = 162991, p = 389, q = 419, and d = 43665, we are able to 
+figure out that Bob's private key is (d = 43665, n = 162991). 
+With Bob's private key information, I was able to create a python function that 
+would transform all the numbers in Alice's ciphertext into ASCII hex numbers. 
+> longList = [17645, 100861, 96754, 160977, 120780, 90338, 130962, 74096,
+> 128123, 25052, 119569, 39404, 6697, 82550, 126667, 151824, 80067, 75272, 
+> 72641, 43884, 5579, 29857, 33449, 46274, 59283, 109287, 22623, 84902, 6161, 
+> 109039, 75094, 56614, 13649, 120780, 133707, 66992, 128221]
+> newList = []
+> for i in longList:
+>     newNumber = i**43665 % 162991
+>     newH = hex(newNumber)
+>     newList.append(newH)
+> print(newList)
+After getting the ASCII hex numbers I was able to use the ASCII chart to translate
+the plaintext sequence of integers back into a character string. 
+The string was: 
+Dear Bob, check this out. https://www.surveillancewatch.io/ See ya, Alice.
+This whole process gave me Alice's original message becasue I basically retraced her 
+steps. Alice starts off with her original message in normal characters. She then used
+the ASCII chart to convert all the characters into hex numbers that then she will turn
+into decimal numbers. Each decimal number has to go through a transformation, as 
+they are the answer to the expression x**13 mod 162991, where x represents the 
+actual numbers that will be sent to Bob. (That is what I understood, I don't know if
+I am right though. Please feel free to send me feedback and clarification on things
+I am misinterpreting.)
+
+The message encoding process Alice used would be insecure even if Bob's keys 
+involved larger integers because it is a simple process that can be undone when one 
+has access to Bob's secret key. No matter how big Bob's secret keys are, it is easy
+to find out the original message when you have enough information about the 
+enciphering process and the numbers that were used. 
