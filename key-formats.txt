@@ -57,6 +57,16 @@ The integer 0 tells us the version the RSA used (0x020100). The integer that you
 
 Public Key
 7. We think that the public key will contain string that is the certificate or public key format identifier and a byte sized n that has the key/certificate data
-
+-----BEGIN RSA PUBLIC KEY-----
+MIIBigKCAYEAydbpdOAdmb6tFueNaO+4fHd/jSda0PsxjHTTkKhnc9KCZZBSJ/I/
+3mILWRlIPMQidQLo14twm+7TJrJ57Nj2OGGn/o5odg+uVo7bcAkW49h4L2n+VFjV
+LPRpewQMPru8vejmlEdp5aJnVOmaTu7cF9q8wPElv5guEOYtElS9rOa/YEoZw8EG
+jaO52P6vBkG6mcwe/rGbWDOq2I9oFMgpDKZZlmrs6oYV5Rl07VjRS3zyWOmZbM7P
+ups0JBm3uk7d2l1LFuULWKpUpxrbD2ZQIm6e9BoKhaNTJoFTvZCCTpAp6IGQrGK6
+/tSJajtab9SKg0f1vgY7mGgSF9XPbOFjDly61T5Nub+6hs8hlyRlZUhUR2opfWzb
+FkUs3wuc7VtnYvbXPEDsoaUsedeLMGCHN5WiDhk/oEJoDOG9QnRUMiEl1ajpLpoh
+bbbUuoXtQqTKm5UhnC02AGhY4/LG0CApksDmVhBL/56FsXA8bQX1NkG8/V4TijMi
+6AZbDyOOy9BVAgMBAAE=
+-----END RSA PUBLIC KEY-----
 Sanity Check
 9. 
