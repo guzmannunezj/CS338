@@ -13,9 +13,8 @@ the information that is sent back and forth in a Diffie-Hellman key echange proc
 the public/secret key pairs to establish a secret shared key K, Alice and Bob are making sure 
 that only they can decrypt the small integer/equation messages, keeping Mal from being nosy. 
 After having set up their secret shared key K, Alice is able to send Bob a long message by 
-encrypting it, AES(K, M), and 
-the secret shared key K using the Diffie-Hellman method and use the same procedure used above but with a twist, to verify that the messages they send to each other are not being modified they send a hash number along with their message so Mal 
-cannot modify anything without getting away with it
+encrypting it, AES(K, M). Along with the encrypted message, Alice would send Bob a hash of te message so that he is able to know whether or not the message he received was tampered with. Bob would have to calulate the hash of the message and if he got the same value as the one 
+that Alice sent him, he will know the message was not modified by Mal. 
 
 3. AES with public/secret key pairs and *****search in notes to see how they can verify that its them who is sending the message with secret key?***** would it be a message that Alice's public key can decrypt? maybe not
 
