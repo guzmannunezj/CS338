@@ -13,18 +13,20 @@ the information that is sent back and forth in a Diffie-Hellman key echange proc
 the public/secret key pairs to establish a secret shared key K, Alice and Bob are making sure 
 that only they can decrypt the small integer/equation messages, keeping Mal from being nosy. 
 After having set up their secret shared key K, Alice is able to send Bob a long message by 
-encrypting it, AES(K, M). Along with the encrypted message, Alice would send Bob a hash of te message so that he is able to know whether or not the message he received was tampered with. Bob would have to calulate the hash of the message and if he got the same value as the one 
-that Alice sent him, he will know the message was not modified by Mal. 
+encrypting it, AES(K, M). Along with the encrypted message, Alice would send Bob a hash of 
+the message so that he is able to know whether or not the message he received was tampered 
+with. Bob would have to calulate the hash of the message and if he got the same value as 
+the one that Alice sent him, he will know the message was not modified by Mal. 
 
 3. AES, Diffie-Hellman, and public/secret key pairs: After having established a shared key 
 kye value K using the Diffie-Hellman method, Alice and Bob are able to send each other long 
 messages easily without having to worry about Eve being able to read what they send each 
-other as AITM is impossible. However, because Alice wants to be condfident about Bob knowing 
-it is her sending the messages, Alice will have to encrypt the signed contract M using her 
-private key. By doing this, Alice is forcing Bob to use her public key P_A to decrypt her 
-encrypted message, thus letting him know that it was her who sent it and not Mal since no one 
-else can encrypt a message using their secret key and guarantee that someone else's public key 
-will decrypt it. After having encrypt
+other as AITM is impossible. Along with the encrypted message, AES(K, M), Alice will have to
+encrypt the hash of the message using her secret key S_A, so that when Bob gets the encrypted 
+message and hash value, he will know she sent it becasue he will have to use her public key 
+to decrypt the hash value. After Bob decrypts the message and computes the hash of it, he will 
+be able to compare his hash with Alice's hash and see that she indeed sent him the message 
+and not Mal. 
 
 4. Alice claims: 
 (a) Someone else
