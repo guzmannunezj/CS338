@@ -32,30 +32,35 @@ was it Alice the one who sent him the message and hash, but Mal did not modify a
 (a) Someone replaced the contract and attached her digital signature to it
 (b) Her secret key was stolen and used to create her digital signature, allowing for an enemy 
 to input another contract and say that she indeed signed it. 
-(c) 
+(c) She was tired that day and sent the wrong contract to the wrong person, accidentally causing 
+all this mess. 
 How plausible each claim is: 
 (a) How is that possible? Wouldn't someone have to find a contract that would give back the same 
 hash as the contract that was supposed to reach Bob? The chances of finding another contract that 
 gives the same hash is near impossible. 
 (b) The judge would give her the side-eye as secret keys are kept secret and are usually well 
 hidden. Unless Alice was reckless and let others see her secret key, this is questionable. 
-(c) 
+(c) There is no way Alice could have done that as she would have to calculate the hash of the 
+contract and then use her public key to create her digital signature. That would need more than 
+enough attention that would cause her to double-check the contract she is sending to Bob is the 
+right one.
+
 
 5. The formula CA would use to compute Sig_CA is: 
 E(S_CA, H(Cert_B))
 
 6. That is not enough for Alice to believe she is talking to Bob because the certificate could 
 be expired or it could have been tampered with. (Or it could even be a fake!) Alice could 
-encode a message using the public key in the certificateand ask Bob to send the message back 
-to Alice in plain text using her public key. 
+encode a message using the public key in the certificate and ask Bob to send the message back 
+to Alice in plain text. If it is the same message, Alice will know that Bob really is Bob. 
 
 7. Two ways the certificate-based trust system could be subverted, allowing Mal to convince 
 Alice that Mal is Bob: 
 (one) Mal could easily let Alice interrogate Bob about his identity and truthfulness, but 
 after that interrogation is over and Bob has established that he is the real Bob, Mal could 
-still come in and act as man-in-the-middle, pretending to be Bob and modifying messages and 
-whatnot (this would only work if the communication that is taking place between Alice, Mal, 
-and Bob is through AES and not private/public key pairs).
+still come in and continue on with his man-in-the-middle attack, pretending to be Bob and
+modifying messages and whatnot (this would only work if the communication that is taking 
+place between Alice, Mal, and Bob is through AES and not private/public key pairs).
 
 (two) Mal could also use an expired certificate and pretend to be Bob. 
 
