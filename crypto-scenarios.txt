@@ -29,14 +29,14 @@ of the message, he will be able to compare his hash with Alice's hash and see th
 was it Alice the one who sent him the message and hash, but Mal did not modify anything.  
 
 4. Alice claims: 
-(a) Someone else could have forged her signature in the contract C!
-(b) Her secret key was stolen and used to create her digital signature!
+(a) Someone replaced the contract and attached her digital signature to it
+(b) Her secret key was stolen and used to create her digital signature, allowing for an enemy 
+to input another contract and say that she indeed signed it. 
 (c) 
 How plausible each claim is: 
-(a) The judge would question this by asking her to calculate the hash of the signed contract C 
-that she was supposed to send and the hash of the signed contract that she claims is a fake. If 
-the values are different, it would prove that her signature was indeed forged. If not, she was 
-lying. 
+(a) How is that possible? Wouldn't someone have to find a contract that would give back the same 
+hash as the contract that was supposed to reach Bob? The chances of finding another contract that 
+gives the same hash is near impossible. 
 (b) The judge would give her the side-eye as secret keys are kept secret and are usually well 
 hidden. Unless Alice was reckless and let others see her secret key, this is questionable. 
 (c) 
