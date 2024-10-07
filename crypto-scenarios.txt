@@ -4,29 +4,29 @@ Authors: Jacky Guzman
 by using the Diffie-Hellman key exchange procedure. After having agreed on the key K, Alice 
 can go on and use the symmetric encryption algorithm AES to encrypt her long message to send 
 it to Bob, AES(K, M). This works as AITM is impossible, so we do not need to worry about Eve 
-listening or modifying messages without Alice nor Bob noticing. By setting a shared key that 
-is kept secret from Eve, Eve can't read the messages as she doesn't have access to K to be 
-able to decypher the messages and read them. 
+reading the messages as she doesn't have access to K to be able to decypher the messages and 
+read them. Bob, knowing K and having AES(K, M), will be able to decrypt the crypted message 
+easily, AES_D(K, AES(K, M)) = M. 
 
-2. AES, Diffie-Hellman with public/secret key pairs, and hash funciton SHA_256: By encyrpting 
-the information that is sent back and forth in a Diffie-Hellman key echange procedure using 
-the public/secret key pairs to establish a secret shared key K, Alice and Bob are making sure 
-that only they can decrypt the small integer/equation messages, keeping Mal from being nosy. 
-After having set up their secret shared key K, Alice is able to send Bob a long message by 
-encrypting it, AES(K, M). Along with the encrypted message, Alice would send Bob a hash of 
-the message so that he is able to know whether or not the message he received was tampered 
-with. Bob would have to calulate the hash of the message and if he got the same value as 
-the one that Alice sent him, he will know the message was not modified by Mal. 
+2. AES, Diffie-Hellman with public/secret key pairs, and hash funciton SHA_256: In the 
+Diffie-Hellman procedure, when exchanging information, Alice and Bob will have to encode 
+the short/small information they send each other so that Mal has no opportunity to attempt 
+an AITM attack. After having set on a shared key K, Alice will have to send Bob an encrypted 
+long message along with the hash of the message so that Bob is able to tell if the message 
+he receives was modified by Mal or not. (So Alice sends AES(K, M) along with H(M). Bob 
+receives AES(K, M) and decrypts it, AES_D(K, AES(K, M)). He then computes H(M) and compares 
+it with the hash he got from Alice and checks to see if they are the same or not. A 
+difference of hash values lets Bob know the message has been tampered with.) 
 
-3. AES, Diffie-Hellman, and public/secret key pairs: After having established a shared key 
-kye value K using the Diffie-Hellman method, Alice and Bob are able to send each other long 
+3. AES, Diffie-Hellman, and public/secret key pairs: After having established a shared key  
+value K using the Diffie-Hellman method, Alice and Bob are able to send each other long 
 messages easily without having to worry about Eve being able to read what they send each 
 other as AITM is impossible. Along with the encrypted message, AES(K, M), Alice will have to
 encrypt the hash of the message using her secret key S_A, so that when Bob gets the encrypted 
 message and hash value, he will know she sent it becasue he will have to use her public key 
-to decrypt the hash value. After Bob decrypts the message and computes the hash of it, he will 
-be able to compare his hash with Alice's hash and see that she indeed sent him the message 
-and not Mal. 
+to decrypt the hash value. After Bob decrypts the message with the key K and computes the hash 
+of the message, he will be able to compare his hash with Alice's hash and see that not only 
+was it Alice the one who sent him the message and hash, but Mal did not modify anything.  
 
 4. Alice claims: 
 (a) Someone else
