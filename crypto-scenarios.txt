@@ -1,17 +1,20 @@
 Authors: Jacky Guzman
 
-Everyone has access to the following: 
+1. AES with Diffie-Hellman key exchange procedure: Alice can establish a shared key K with Bob 
+by using the Diffie-Hellman key exchange procedure. After having agreed on the key K, Alice 
+can go on and use the symmetric encryption algorithm AES to encrypt her long message to send 
+it to Bob, AES(K, M). This works as AITM is impossible, so we do not need to worry about Eve 
+listening or modifying messages without Alice nor Bob noticing. By setting a shared key that 
+is kept secret from Eve, Eve can't read the messages as she doesn't have access to K to be 
+able to decypher the messages and read them. 
 
-symmetric encryption algorithm AES ~ AES(K,M) where M = message encrypted and K = key used (key has to be agreed on using Diffie-Hellman key exchange proceedure ~ special phrase used to talk about this); AES_D(K,C) where C = ciphertext (remember that we are using a block cipher mode like CBC) 
-cruptographic hash function SHA-256 ~ H(M) where it represents the hash of the message M
-public/secret key pairs ~ (P,S); Alice: (P_A, S_A); Bob: (P_B, S_B) --- remember that public key encryption is used for short messages b/c much slower than symmetric encryption
-
-1. AES with public/secret key pairs: can use public/secret key pairs to be able to go about the Diffie-Hellman key procedure
-(Alice can send Bob a key that they will both use, no 'agreement' will take place, one person will establish the key that 
-will be used), and from then on, Eve cannot attempt adversary in the middle as they don't have fake keys nor the actual 
-information about K to be able to read the message and pretend she wasn't there
-
-2. AES with public/secret key pairs and hash funciton SHA_256: use the same procedure used above but with a twist, to verify that the messages they send to each other are not being modified they send a hash number along with their message so Mal 
+2. AES, Diffie-Hellman with public/secret key pairs, and hash funciton SHA_256: By encyrpting 
+the information that is sent back and forth in a Diffie-Hellman key echange procedure using 
+the public/secret key pairs to establish a secret shared key K, Alice and Bob are making sure 
+that only they can decrypt the small integer/equation messages, keeping Mal from being nosy. 
+After having set up their secret shared key K, Alice is able to send Bob a long message by 
+encrypting it, AES(K, M), and 
+the secret shared key K using the Diffie-Hellman method and use the same procedure used above but with a twist, to verify that the messages they send to each other are not being modified they send a hash number along with their message so Mal 
 cannot modify anything without getting away with it
 
 3. AES with public/secret key pairs and *****search in notes to see how they can verify that its them who is sending the message with secret key?***** would it be a message that Alice's public key can decrypt? maybe not
@@ -28,14 +31,17 @@ How plausible each claim is:
 5. The formula CA would use to compute Sig_CA is: 
 E(S_CA, H(Cert_B))
 
-6. That is not enough for Alice to believe she is talking to Bob because the certificate could be expired or it could 
-have been tampered with. (Or it could even be a fake!) Alice could encode a message using the public key in the 
-certificateand ask Bob to send the message back to Alice in plain text using her public key. 
+6. That is not enough for Alice to believe she is talking to Bob because the certificate could 
+be expired or it could have been tampered with. (Or it could even be a fake!) Alice could 
+encode a message using the public key in the certificateand ask Bob to send the message back 
+to Alice in plain text using her public key. 
 
-7. Two ways the certificate-based trust system could be subverted, allowing Mal to convince Alice that Mal is Bob: 
-(one) Mal could easily let Alice interrogate Bob about his identity and truthfulness, but after that interrogation is over 
-and Bob has established that he is the real Bob, Mal could still come in and act as man-in-the-middle, pretending to be Bob 
-and modifying messages and whatnot (this would only work if the communication that is taking place between Alice, Mal, 
+7. Two ways the certificate-based trust system could be subverted, allowing Mal to convince 
+Alice that Mal is Bob: 
+(one) Mal could easily let Alice interrogate Bob about his identity and truthfulness, but 
+after that interrogation is over and Bob has established that he is the real Bob, Mal could 
+still come in and act as man-in-the-middle, pretending to be Bob and modifying messages and 
+whatnot (this would only work if the communication that is taking place between Alice, Mal, 
 and Bob is through AES and not private/public key pairs).
 
 (two) Mal could also use an expired certificate and pretend to be Bob. 
