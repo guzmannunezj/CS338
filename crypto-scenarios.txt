@@ -16,10 +16,18 @@ After having set up their secret shared key K, Alice is able to send Bob a long 
 encrypting it, AES(K, M). Along with the encrypted message, Alice would send Bob a hash of te message so that he is able to know whether or not the message he received was tampered with. Bob would have to calulate the hash of the message and if he got the same value as the one 
 that Alice sent him, he will know the message was not modified by Mal. 
 
-3. AES with public/secret key pairs and *****search in notes to see how they can verify that its them who is sending the message with secret key?***** would it be a message that Alice's public key can decrypt? maybe not
+3. AES, Diffie-Hellman, and public/secret key pairs: After having established a shared key 
+kye value K using the Diffie-Hellman method, Alice and Bob are able to send each other long 
+messages easily without having to worry about Eve being able to read what they send each 
+other as AITM is impossible. However, because Alice wants to be condfident about Bob knowing 
+it is her sending the messages, Alice will have to encrypt the signed contract M using her 
+private key. By doing this, Alice is forcing Bob to use her public key P_A to decrypt her 
+encrypted message, thus letting him know that it was her who sent it and not Mal since no one 
+else can encrypt a message using their secret key and guarantee that someone else's public key 
+will decrypt it. After having encrypt
 
 4. Alice claims: 
-(a) 
+(a) Someone else
 (b) 
 (c) 
 How plausible each claim is: 
