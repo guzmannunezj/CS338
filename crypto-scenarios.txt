@@ -1,4 +1,5 @@
 Authors: Jacky Guzman and Anne Lehr
+Got help from Aadi. 
 
 1. AES with Diffie-Hellman key exchange procedure: Alice can establish a shared key K with Bob 
 by using the Diffie-Hellman key exchange procedure. After having agreed on the key K, Alice 
