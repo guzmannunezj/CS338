@@ -1,0 +1,66 @@
+Authors: Jacky Guzman Nunez and Anne Lehr
+
+Scenario #2 
+  
+The main ethical question we have to face is whether or not to continue working for Beerz if in their updated app version they will start to sell customers’ private data, 
+this is assuming that they do tell their customers that their data would be kept private and immediately disposed of when no longer in use. However, regardless of the 
+clients knowing about how their information is being used or not, it is an issue that the set up of the app is presented as deleting week old information but yet it can 
+still be retrieved after the fact. We need to choose whether or not to continue working for Beerz if they decide to sell their customers’ data without their consent first. 
+It is questionable for Beerz to sell the private information that we had said wouldn’t be shared with outside parties, it is even worse that the information is still in our 
+hands and not completely deleted and gotten rid of. Also, it is concerning to think about how the stored location information could be exploited by employees and hackers 
+alike. 
+
+The app users have the right to know from the jump that their information will be stored for at least 1 week. The app users also  have the right to be told about the 
+possibility of having their personal information sold, even if that information is made to be anonymous. They have the right to deny or accept the company’s request to sell 
+their data. They also have the right to know that the company will still have access to their data even after it is ‘deleted’. The employees should be told about the 
+company’s decision to sell their customer’s information, as some of them might be against that and won’t want to work for the company anymore. Similarly to the app user, 
+employees might want to be aware of the fact that information is being retrieved after the week-long timeline. The investors should be told about the way that selling 
+private information would affect the company’s economic state, so the investors can decide on whether or not they want to continue investing in the company or withdraw. In 
+addition to this, investors might have an intolerance to unethical sharing of information and consequently might decide to pull their funding.  
+
+We would love to know what terms and conditions customers are provided with and have to accept before using the app, as that could dictate our comprehension of what the 
+clients should know about how their private information is dealt with by the company. If the customers that use Beerz 1.0 had signed a Terms and Conditions where they were 
+warned about how the company uses their private information and how it would be disposed of after being used, then it would be necessary for anyone who used the app after 
+2.0 releases to be informed of the changes. Because that is not explicitly told to us, we would have to confirm whether or not that’s the case in order to trust the ethics 
+of Beerz. If we knew for sure that both the old and new users would be aware of the use of their information, then the idea of selling anonymous location data does not look 
+as horrible as before. However, we highly doubt that the clients were told about their information being potentially sold as the CTO had told me that data we obtained was 
+discarded once it had been used for its purpose. We would also love to know why the CTO had kept quiet and not said anything. Is it not their job to ensure “data privacy 
+safety” (The Role of a Chief Technology Officer (CTO)  | MIT Professional Education) and tell the CEO and fellow coworker that the idea of selling anonymized location data 
+should be thought over and not implemented right away? We also need to know about the laws there are regarding the selling of private data and in what situations the 
+company could get sued. We would also like to know why the idea of selling data to get money is being brought up in the meeting if the meeting was only supposed to be about 
+the Beerz 2.0 version updates. The sudden and surprising bringing up of this idea is concerning on both an individual and corporate level since we were under the impression 
+from the CTO that the company does not want to participate in “surveillance capitalism”. Whether it was that the CTO lied to us from the get go, or that this idea from the 
+CEO was brought up after the fact, if the CTO knew any of this then as employees we would consider that to be a red flag.
+
+We could easily put in our two-week notice to quit the job, but that solution might not be the best one nor the ethically ‘correct’ one as we are simply ignoring and 
+keeping my distance from the company instead of preventing the selling of data without the clients’ consent first. I could talk to the CTO and have a chat about what the 
+next steps would be if we do decide to go down the route of selling the anonymized location data, which would have to involve a Terms and Conditions section that clients 
+would have to sign/agree to before using Beerz version 1.0 and 2.0. If the clients do not sign/agree to the Terms and Conditions. It’s important that we also know if 
+clients would be able to still use the services? Consequences for following through with the CEO’s suggestion would be completely ignoring the initial belief the company 
+had in not selling data, simply using it and throwing it away when it was no longer needed. I could try to convince the CTO, CEO, and our lovely coworker of why selling the 
+data should not be considered, as the app was initially created with the idea of not participating “in surveillance capitalism” and discarding the data “when we are done 
+with it” (words of the CTO herself). It is important for the company to stick to its word. The consequences of this would be taking away the company’s opportunity of making 
+more money, which is a touchy subject. The company might need the extra money if it is in a financially tough position or it is a sign that the company is turning greedy 
+and soon will start to violate other rules if it means earning a few more cents. 
+
+The ACM Code of Ethics and Professional Conduct does indeed offer lots of relevant guidance. In section 1.1, it says that “An essential aim of computing professionals is to 
+minimize negative consequences of computing, including threats to health, safety, personal security, and privacy. When the interests of multiple groups conflict, the needs 
+of those less advantaged should be given increased attention and priority.” This tells us that privacy should be well protected and the needs of the customers should be 
+given priority over the benefits of the company earning a few more dollars through the selling of personal information (even if it is anonymized). Section 1.2 tells us to 
+“avoid harm...Examples of harm include…unjustified destruction or disclosure of information.” There is no reason for us to sell the information and disclose it to third 
+parties besides monetary gain; there is no ethical reason for us to do this. Section 1.6 backs up section 1.2, “Computing professionals should only use personal information 
+for legitimate ends and without violating the rights of individuals and groups. This requires taking precautions to prevent re-identification of anonymized data or 
+unauthorized data collection, ensuring the accuracy of data, understanding the provenance of the data, and protecting it from unauthorized access and accidental disclosure. 
+Computing professionals should establish transparent policies and procedures that allow individuals to understand what data is being collected and how it is being used, to 
+give informed consent for automatic data collection, and to review, obtain, correct inaccuracies in, and delete their personal data.” Additionally, in section 3.6 it says 
+“Leaders should take care when changing or discontinuing support for system features on which people still depend.” This supports our concern for making sure that there is 
+a warning and a new terms and conditions that allows for both old and new users of Beerz to be aware of how their private information is being utilized by the company. 
+Whether they choose to sell the information or not, if 2.0 goes through then there has been a change from the immediate erasure of data to a 1 week timeline. 
+
+In the end, we would try our best to convince the CTO to not sell the customer’s location data, for both individual and professional reasons. On an individual level, we 
+were told personally by the CTO at our initial interview that Beerz prides themselves in not “participating in surveillance capitalism”. While it is understandable that as 
+companies grow, priorities shift, we made it clear that it is important to us that we value the rights of the users we serve and were heavily influenced by the CTO’s 
+specific comment on that. On a professional level, there are a multitude of concerns that have arised with the possibility of Beerz taking private data and selling it to 
+outside companies. Through the information available from the scenario and the Code, we are in disagreement with the choice to retrieve and sell sensitive information that 
+is presented as having been erased from the Beerz’s archive. 
+
